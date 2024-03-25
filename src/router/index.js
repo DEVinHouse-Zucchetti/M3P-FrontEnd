@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '../views/Dashbord.vue'
 import Login from '../views/Login.vue'
+import StudentDocuments from '../views/StudentDocuments.vue';
 import Exemplo from '../views/PaginaExemplo.vue'
 
 const router = createRouter({
@@ -40,6 +41,12 @@ const router = createRouter({
       path: '/students/new',
       name: 'Novo Estudante',
       component: Exemplo
+    },
+
+    {
+      path: '/student/documents',
+      name: 'student-documents',
+      component: StudentDocuments
     },
 
     //perfil instrutor
