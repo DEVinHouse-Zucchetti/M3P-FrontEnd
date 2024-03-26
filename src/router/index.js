@@ -2,7 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '../views/Dashbord.vue'
 import Login from '../views/Login.vue'
+
+import AvaliationStep01 from '@/components/AvaliationStep01.vue'
+import AvaliationStep02 from '@/components/AvaliationStep02.vue'
+import AvaliationStep03 from '@/components/AvaliationStep03.vue'
+
 import Exemplo from '../views/PaginaExemplo.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +24,22 @@ const router = createRouter({
       component: Dashboard
     },
 
+
+    {
+      path: '/avaliation/step1',
+      name: 'AvaliationStep01',
+      component: AvaliationStep01
+    },
+    {
+      path: '/avaliation/step2',
+      name: 'AvaliationStep02',
+      component: AvaliationStep02
+    },
+    {
+      path: '/avaliation/step3',
+      name: 'AvaliationStep03',
+      component: AvaliationStep03
+    },
     //perfil usuário
     {
       path: '/users',
@@ -71,6 +93,7 @@ const router = createRouter({
       path: '/student/workouts',
       name: 'Treinos do aluno',
       component: Exemplo
+
     }
   ]
 })
